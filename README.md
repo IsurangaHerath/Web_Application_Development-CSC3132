@@ -1,7 +1,5 @@
 # Web_Application_Development-CSC3132
 
-## Web Application Development
-
 I specialize in building dynamic, data-driven applications that prioritize user experience and efficient back-end architecture. My development process focuses on creating scalable solutions that solve real-world problems.
 
 ---
