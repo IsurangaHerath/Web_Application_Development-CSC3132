@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sweet Delights Bakery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            background-color: #8B4513;
+            padding: 15px 30px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+        
+        nav a:hover {
+            color: #FFD700;
+        }
+        
+        .hero {
+            background-color: #654321;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        
+        .btn {
+            background-color: #D2691E;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: #8B4513;
+        }
+        
+        .menu {
+            padding: 50px 20px;
+            background-color: #FFF8DC;
+        }
+        
+        .menu h2 {
+            text-align: center;
+            color: #8B4513;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+        
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .item h3 {
+            color: #8B4513;
+            margin: 10px 0;
+        }
+        
+        .item .price {
+            color: #D2691E;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .about {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: white;
+        }
+        
+        .about h2 {
+            color: #8B4513;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .about p {
+            max-width: 600px;
+            margin: 10px auto;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .contact {
+            padding: 50px 20px;
+            background-color: #FFF8DC;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            color: #8B4513;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        
+        .info {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .info div {
+            text-align: center;
+        }
+        
+        .info h3 {
+            color: #8B4513;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background-color: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sweet Delights Bakery</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Fresh Baked Goods Every Day</h2>
+        <p>Handmade pastries, breads, and cakes baked fresh daily</p>
+        <a href="#menu" class="btn">View Menu</a>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2>Our Menu</h2>
+        <div class="items">
+            <div class="item">
+                <h3>Butter Croissant</h3>
+                <p>Flaky French pastry</p>
+                <span class="price">$3.50</span>
+            </div>
+            <div class="item">
+                <h3>Fresh Baguette</h3>
+                <p>Crispy crust bread</p>
+                <span class="price">$4.00</span>
+            </div>
+            <div class="item">
+                <h3>Chocolate Cake</h3>
+                <p>Rich & moist</p>
+                <span class="price">$25.00</span>
+            </div>
+            <div class="item">
+                <h3>Vanilla Cupcakes</h3>
+                <p>With buttercream</p>
+                <span class="price">$2.50</span>
+            </div>
+            <div class="item">
+                <h3>Glazed Donuts</h3>
+                <p>Soft & sweet</p>
+                <span class="price">$2.00</span>
+            </div>
+            <div class="item">
+                <h3>Chocolate Cookies</h3>
+                <p>Chewy & delicious</p>
+                <span class="price">$1.50</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Sweet Delights Bakery! Since 2010, we've been serving the community with fresh baked goods made from quality ingredients.</p>
+        <p>Our bakers work early every morning to ensure everything is fresh. We put our heart into every creation.</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <div class="info">
+            <h3>Address</h3>
+                <p>123 Bakery Street<br>Sweet City, SC 12345</p>
+            </div>
+            <div>
+                <h3>Phone</h3>
+                <p>(555) 123-4567</p>
+            </div>
+            <div>
+                <h3>Hours</h3>
+                <p>Mon-Sat: 7AM - 7PM<br>Sunday: 8AM - 5PM</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sweet Delights Bakery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
