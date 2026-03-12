@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .calculator {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #display {
+            width: 100%;
+            height: 40px;
+            font-size: 24px;
+            text-align: right;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            gap: 10px;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fff;
+        }
+
+        button:hover {
+            background: #e0e0e0;
+        }
+
+        .orange {
+            background: orange;
+            color: white;
+        }
+
+        .orange:hover {
+            background: darkorange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" id="display">
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="deleteChar()">DEL</button>
+            <button class="orange" onclick="addOperator('%')">%</button>
+            <button class="orange" onclick="addOperator('/')">/</button>
+
+            <button onclick="addNumber('7')">7</button>
+            <button onclick="addNumber('8')">8</button>
+            <button onclick="addNumber('9')">9</button>
+            <button class="orange" onclick="addOperator('*')">*</button>
+
+            <button onclick="addNumber('4')">4</button>
+            <button onclick="addNumber('5')">5</button>
+            <button onclick="addNumber('6')">6</button>
+            <button class="orange" onclick="addOperator('-')">-</button>
+
+            <button onclick="addNumber('1')">1</button>
+            <button onclick="addNumber('2')">2</button>
+            <button onclick="addNumber('3')">3</button>
+            <button class="orange" onclick="addOperator('+')">+</button>
+
+            <button onclick="addNumber('0')" style="grid-column: span 2;">0</button>
+            <button onclick="addDot()">.</button>
+            <button class="orange" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+
+    <script>
+        // Get the display element
+        var display = document.getElementById('display');
+
+        // Add number to display
+        function addNumber(num) {
+            display.value = display.value + num;
+        }
+
+        // Add operator to display
+        function addOperator(op) {
+            display.value = display.value + op;
+        }
+
+        // Add decimal point
+        function addDot() {
+            if (display.value.indexOf('.') == -1) {
+                display.value = display.value + '.';
+            }
+        }
+
+        // Clear the display
+        function clearDisplay() {
+            display.value = '';
+        }
+
+        // Delete last character
+        function deleteChar() {
+            display.value = display.value.slice(0, -1);
+        }
+
+        // Calculate the result
+        function calculateResult() {
+            try {
+                display.value = eval(display.value);
+            } catch (e) {
+                display.value = 'Error';
+            }
+        }
+    </script>
+</body>
+
+</html>
